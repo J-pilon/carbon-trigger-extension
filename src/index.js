@@ -43,6 +43,8 @@ const displayCarbonUsage = async (apiKey, region) => {
 			})
 			.then((response) => {
 				//🌱6. calculate color of icon, based on carbon intensity🌱
+				let co2 = Math.floor(response.data.data.carbonIntensity);
+				calculateColor(co2);
 
 				loading.style.display = 'none';
 				form.style.display = 'none';
