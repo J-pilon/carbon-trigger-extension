@@ -27,6 +27,12 @@ const calculateColor = async (value) => {
 
 	let closestColor = colors[scaleIndex];
 	//🌱 7. update icon🌱
+	chrome.runtime.sendMessage({
+		action: 'updateIcon',
+		value: {
+			color: closestColor
+		}
+	});
 };
 
 const displayCarbonUsage = async (apiKey, region) => {
