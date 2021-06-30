@@ -61,6 +61,8 @@ const displayCarbonUsage = async (apiKey, region) => {
 // set up api key and region
 const setUpUser = async (apiKey, regionName) => {
 	//🌱 2. manage local storage🌱
+	localStorage.setItem('apiKey', apiKey)
+	localStorage.setItem('regionName', regionName)
 	loading.style.display = 'block';
 	errors.textContent = '';
 	clearBtn.style.display = 'block';
