@@ -88,6 +88,12 @@ const init = async () => {
 	const storedRegion = localStorage.getItem('regionName');
 
 	//🌱 5. set icon to be generic green🌱
+	chrome.runtime.sendMessage({
+		action: 'updateIcon',
+		value: {
+			color: 'green'
+		}
+	});
 
 	if (storedApiKey === null || storedRegion === null) {
 		//if we don't have the keys, show the form
