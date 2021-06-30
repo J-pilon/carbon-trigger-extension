@@ -48,6 +48,11 @@ const displayCarbonUsage = async (apiKey, region) => {
 				form.style.display = 'none';
 				myregion.textContent = region;
 				//🌱4. display usage and carbon source🌱
+				usage.textContent =
+					Math.round(response.data.data.carbonIntensity) + ' grams (grams C02 emitted per kilowatt hour)';
+				fossilfuel.textContent =
+					response.data.data.fossilFuelPercentage.toFixed(2) +
+					'% (percentage of fossil fuels used to generate electricity)';
 				results.style.display = 'block';
 			});
 	} catch (error) {
