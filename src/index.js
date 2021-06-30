@@ -76,6 +76,8 @@ const handleSubmit = async (e) => {
 //initial checks
 const init = async () => {
 	//🌱 1. if anything is in localStorage, pick it up🌱
+	const storedApiKey = localStorage.getItem('apiKey');
+	const storedRegion = localStorage.getItem('regionName');
 
 	//🌱 5. set icon to be generic green🌱
 
